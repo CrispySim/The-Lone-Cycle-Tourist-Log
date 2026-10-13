@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Solo Misanthrope’s Bikepacking Log</title>
+<meta name="description" content="Bikepacking adventures: routes, stats from Strava, and photos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="vendor/leaflet.css">
+<style>
+:root{
+  --bg:#f4efe6; --card:#fffaf1; --ink:#1f2a24; --muted:#5f6b62; --line:#ddd4c3;
+  --moss:#3d5a40; --rust:#b4532a; --sky:#dfe9e4;
+  --serif:'Fraunces',Georgia,serif; --sans:'Inter',system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 var(--sans)}
+a{color:var(--rust)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header.site{background:var(--moss);color:#f4efe6}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 20px}
+header.site a{color:inherit;text-decoration:none}
+.brand{font:700 1.25rem var(--serif)}
+nav a{margin-left:18px;font-size:.95rem;opacity:.9}
+nav a:hover{opacity:1;text-decoration:underline}
+.hero{background:linear-gradient(180deg,var(--moss) 0,#4a6b4d 100%);color:#f4efe6;padding:48px 0 64px}
+.hero h1{font:700 clamp(2rem,6vw,3.4rem)/1.1 var(--serif);margin:0 0 12px}
+.hero p{max-width:620px;margin:0;font-size:1.1rem;opacity:.92}
+h2{font:700 1.8rem var(--serif);margin:0 0 6px}
+section{padding:44px 0}
+.lede{color:var(--muted);margin:0 0 24px}
+.trips{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}
+.trip-card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;text-decoration:none;color:inherit;transition:transform .15s,box-shadow .15s}
+.trip-card:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(31,42,36,.12)}
+.trip-card .mini{height:150px;background:var(--sky);position:relative}
+.trip-card .mini svg{width:100%;height:100%;display:block}
+.trip-card .mini .soon{position:absolute;inset:0;display:grid;place-items:center;color:var(--muted);font-size:.9rem}
+.trip-card .body{padding:16px 18px 18px}
+.trip-card h3{font:700 1.25rem var(--serif);margin:0 0 2px}
+.trip-card .dates{color:var(--muted);font-size:.9rem;margin-bottom:8px}
+.trip-card p{margin:0 0 10px;font-size:.95rem}
+.trip-card .figs{font-weight:600;font-size:.9rem;color:var(--moss)}
+.back{display:inline-block;margin-bottom:14px;font-size:.95rem}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;margin:22px 0}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.stat b{display:block;font:700 1.7rem/1.1 var(--serif);color:var(--moss)}
+.stat span{font-size:.82rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+#map{height:460px;border-radius:14px;border:1px solid var(--line);z-index:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 6px}
+.chip{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:6px 14px;font:500 .88rem var(--sans);cursor:pointer;color:var(--ink);display:inline-flex;align-items:center;gap:7px}
+.chip i{width:10px;height:10px;border-radius:50%;display:inline-block}
+.chip[aria-pressed=true]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.days{display:grid;gap:18px;margin-top:26px}
+.day{background:var(--card);border:1px solid var(--line);border-left-width:6px;border-radius:14px;padding:18px 20px}
+.day h3{font:700 1.3rem var(--serif);margin:0}
+.day .meta{color:var(--muted);font-size:.9rem;margin:2px 0 12px}
+.day .nums{display:flex;flex-wrap:wrap;gap:6px 22px;font-size:.95rem;margin-bottom:12px}
+.day .nums b{font-weight:600}
+.day .notes{margin:0 0 12px}
+.day .links{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:12px}
+.btn{border:1px solid var(--rust);color:var(--rust);background:transparent;border-radius:8px;padding:6px 12px;font:500 .88rem var(--sans);cursor:pointer;text-decoration:none}
+.btn:hover{background:var(--rust);color:#fff}
+.embed{margin:6px 0 12px}
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}
+.gallery button{border:0;padding:0;background:none;cursor:zoom-in;border-radius:10px;overflow:hidden;aspect-ratio:4/3}
+.gallery img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .2s}
+.gallery button:hover img{transform:scale(1.04)}
+.nophotos{border:1.5px dashed var(--line);border-radius:10px;padding:12px 14px;color:var(--muted);font-size:.88rem}
+.nophotos code{background:#efe7d6;padding:1px 6px;border-radius:5px}
+dialog.lightbox{border:0;background:rgba(0,0,0,.92);max-width:100vw;max-height:100vh;width:100vw;height:100vh;padding:0;color:#fff}
+dialog.lightbox::backdrop{background:#000}
+.lb{display:grid;grid-template-rows:1fr auto;height:100%;place-items:center;padding:16px}
+.lb img{max-width:100%;max-height:82vh;object-fit:contain}
+.lb p{margin:10px 0 0;text-align:center}
+.lb .x,.lb .nav{position:absolute;background:rgba(255,255,255,.14);border:0;color:#fff;font-size:1.6rem;width:44px;height:44px;border-radius:50%;cursor:pointer}
+.lb .x{top:14px;right:14px}.lb .prev{left:14px;top:50%}.lb .next{right:14px;top:50%}
+footer{padding:30px 0 50px;color:var(--muted);font-size:.88rem;border-top:1px solid var(--line)}
+.hidden{display:none}
+@media(max-width:600px){#map{height:340px}nav a{margin-left:12px}}
+</style>
+</head>
+<body>
+<header class="site"><div class="wrap">
+  <a class="brand" href="#" style="font-size:1.1rem">The Solo Misanthrope’s Bikepacking Log</a>
+  <nav><a href="#trips">Adventures</a><a href="#about">About</a></nav>
+</div></header>
+
+<div id="home">
+  <div class="hero"><div class="wrap">
+    <h1>Panniers packed, people avoided.</h1>
+    <p>A log of multi-day rides: where I went, how far, how hilly (not very, in Holland) and what it looked like.</p>
+  </div></div>
+  <section id="trips"><div class="wrap">
+    <h2>Adventures</h2>
+    <p class="lede">Tap a trip for the route map, day-by-day stats, Strava links and photos.</p>
+    <div class="trips" id="tripGrid"></div>
+  </div></section>
+  <section id="about" style="padding-top:0"><div class="wrap">
+    <h2>About this site</h2>
+    <p class="lede" style="max-width:640px">Distances, climbing and routes come straight from Strava. Photos live in the <code>photos</code> folder alongside this page. Edit <code>trips.js</code> to add notes, retitle days or add new adventures.</p>
+  </div></section>
+</div>
+
+<div id="trip" class="hidden"><div class="wrap" style="padding-top:30px">
+  <a class="back" href="#trips">&larr; All adventures</a>
+  <h2 id="tName"></h2>
+  <p class="lede" id="tBlurb" style="max-width:700px"></p>
+  <div class="stats" id="tStats"></div>
+  <div id="map" role="img" aria-label="Map of the route"></div>
+  <div class="chips" id="chips"></div>
+  <div class="days" id="days"></div>
+</div></div>
+
+<footer><div class="wrap">Route data from Strava. Map &copy; OpenStreetMap contributors.</div></footer>
+
+<dialog class="lightbox" id="lb"><div class="lb">
+  <button class="x" aria-label="Close">&times;</button>
+  <button class="nav prev" aria-label="Previous">&lsaquo;</button>
+  <button class="nav next" aria-label="Next">&rsaquo;</button>
+  <img alt=""><p></p>
+</div></dialog>
+
+<script src="vendor/leaflet.js"></script>
+<script src="trips.js"></script>
+<script>
+const COLORS=['#b4532a','#2f6f8f','#6a4c93','#3d5a40','#c28b00','#a23b5f'];
+const M_PER_MILE=1609.344, FT_PER_M=3.28084;
+const fmtMi=m=>(m/M_PER_MILE).toFixed(1);
+const fmtFt=m=>Math.round(m*FT_PER_M).toLocaleString('en-GB');
+const fmtTime=s=>{const h=Math.floor(s/3600),m=Math.round(s%3600/60);return h+'h '+String(m).padStart(2,'0')+'m'};
+const fmtDate=d=>new Date(d+'T12:00:00').toLocaleDateString('en-GB',{weekday:'short',day:'numeric',month:'long'});
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+function decode(p){let i=0,lat=0,lng=0,out=[];
+  while(i<p.length){let r=[];
+    for(let k=0;k<2;k++){let s=0,v=0,b;do{b=p.charCodeAt(i++)-63;v|=(b&31)<<s;s+=5}while(b>=32);r.push(v&1?~(v>>1):v>>1)}
+    lat+=r[0];lng+=r[1];out.push([lat/1e5,lng/1e5])}
+  return out}
+
+const sum=(arr,f)=>arr.reduce((a,x)=>a+f(x),0);
+function dayTotals(d){return{dist:sum(d.acts,a=>a.dist_m),time:sum(d.acts,a=>a.moving_s),elev:sum(d.acts,a=>a.elev_m),kcal:sum(d.acts,a=>a.kcal)}}
+function tripTotals(t){const ds=t.days.map(dayTotals);return{dist:sum(ds,x=>x.dist),time:sum(ds,x=>x.time),elev:sum(ds,x=>x.elev),kcal:sum(ds,x=>x.kcal)}}
+
+function miniSvg(t){
+  const lines=t.days.flatMap((d,i)=>d.acts.map(a=>({c:COLORS[i%COLORS.length],pts:decode(a.poly)})));
+  const all=lines.flatMap(l=>l.pts);
+  const la=all.map(p=>p[0]),ln=all.map(p=>p[1]);
+  const minLa=Math.min(...la),maxLa=Math.max(...la),minLn=Math.min(...ln),maxLn=Math.max(...ln);
+  const k=Math.cos((minLa+maxLa)/2*Math.PI/180);
+  const w=(maxLn-minLn)*k,h=maxLa-minLa,s=Math.min(280/w,130/h),ox=(300-w*s)/2,oy=(150-h*s)/2;
+  const P=([a,b])=>[(ox+(b-minLn)*k*s).toFixed(1),(oy+(maxLa-a)*s).toFixed(1)].join(',');
+  return '<svg viewBox="0 0 300 150" preserveAspectRatio="xMidYMid meet" aria-hidden="true">'+
+    lines.map(l=>'<polyline fill="none" stroke="'+l.c+'" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" points="'+l.pts.filter((_,i)=>i%2==0).map(P).join(' ')+'"/>').join('')+'</svg>';
+}
+
+function renderHome(){
+  document.getElementById('tripGrid').innerHTML=TRIPS.map(t=>{
+    const live=t.days.length>0, tot=live&&tripTotals(t);
+    return '<a class="trip-card" href="#'+t.id+'"><div class="mini">'+(live?miniSvg(t):'<div class="soon">Rides to be added</div>')+'</div>'+
+      '<div class="body"><h3>'+esc(t.name)+'</h3><div class="dates">'+esc(t.dates)+'</div><p>'+esc(t.blurb)+'</p>'+
+      (live?'<div class="figs">'+fmtMi(tot.dist)+' miles &middot; '+fmtFt(tot.elev)+' ft climbed &middot; '+t.days.length+' days</div>':'')+'</div></a>';
+  }).join('');
+}
+
+let map, layers=[];
+function renderTrip(t){
+  document.getElementById('tName').textContent=t.name;
+  document.getElementById('tBlurb').textContent=t.blurb+'  ('+t.dates+')';
+  if(!t.days.length){
+    document.getElementById('tStats').innerHTML='';
+    document.getElementById('days').innerHTML='<div class="nophotos">No rides added to this adventure yet. Add them to <code>trips.js</code> (or ask Claude to pull them from Strava).</div>';
+    document.getElementById('chips').innerHTML='';document.getElementById('map').classList.add('hidden');return}
+  document.getElementById('map').classList.remove('hidden');
+  const tot=tripTotals(t);
+  document.getElementById('tStats').innerHTML=[
+    [fmtMi(tot.dist),'miles'],[fmtFt(tot.elev),'feet climbed'],[t.days.length,'riding days'],[fmtTime(tot.time),'moving time'],[tot.kcal.toLocaleString('en-GB'),'kcal burned'],
+    [fmtMi(tot.dist/t.days.length),'miles / day']
+  ].map(([v,l])=>'<div class="stat"><b>'+v+'</b><span>'+l+'</span></div>').join('');
+
+  if(!map){map=L.map('map',{scrollWheelZoom:false}).setView([52.3,5],8);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:18,attribution:'&copy; OpenStreetMap contributors'}).addTo(map)}
+  layers.forEach(l=>map.removeLayer(l));layers=[];
+  const groups=t.days.map((d,i)=>{
+    const g=L.featureGroup(d.acts.map(a=>L.polyline(decode(a.poly),{color:COLORS[i%COLORS.length],weight:4,opacity:.9})));
+    g.bindTooltip('Day '+d.n+': '+d.title,{sticky:true});g.addTo(map);layers.push(g);return g});
+  const first=decode(t.days[0].acts[0].poly)[0], lastD=t.days[t.days.length-1], lastA=lastD.acts[lastD.acts.length-1], lp=decode(lastA.poly);
+  layers.push(L.circleMarker(first,{radius:7,color:'#fff',weight:2,fillColor:'#2e7d32',fillOpacity:1}).bindTooltip('Start').addTo(map));
+  layers.push(L.circleMarker(lp[lp.length-1],{radius:7,color:'#fff',weight:2,fillColor:'#c62828',fillOpacity:1}).bindTooltip('Finish').addTo(map));
+  const all=L.featureGroup(groups);
+  const fitAll=()=>map.fitBounds(all.getBounds(),{padding:[20,20]});
+  setTimeout(()=>{map.invalidateSize();fitAll()},0);
+
+  const chips=document.getElementById('chips');
+  chips.innerHTML='<button class="chip" data-i="-1" aria-pressed="true">Whole trip</button>'+
+    t.days.map((d,i)=>'<button class="chip" data-i="'+i+'" aria-pressed="false"><i style="background:'+COLORS[i%COLORS.length]+'"></i>Day '+d.n+'</button>').join('');
+  chips.onclick=e=>{const b=e.target.closest('.chip');if(!b)return;const i=+b.dataset.i;
+    chips.querySelectorAll('.chip').forEach(c=>c.setAttribute('aria-pressed',c===b));
+    groups.forEach((g,j)=>g.setStyle({opacity:i<0||i===j?.9:.18,weight:i===j?6:4}));
+    map.fitBounds((i<0?all:groups[i]).getBounds(),{padding:[20,20]});
+    if(i>=0)document.getElementById('day-'+i).scrollIntoView({behavior:'smooth',block:'nearest'})};
+
+  document.getElementById('days').innerHTML=t.days.map((d,i)=>{
+    const x=dayTotals(d), col=COLORS[i%COLORS.length];
+    const photos=d.photos||[];
+    const dir='photos/'+t.id+'/';
+    return '<article class="day" id="day-'+i+'" style="border-left-color:'+col+'">'+
+      '<h3>Day '+d.n+': '+esc(d.title)+'</h3>'+
+      '<div class="meta">'+fmtDate(d.date)+' &middot; starting from '+esc(d.start)+'</div>'+
+      '<div class="nums"><span><b>'+fmtMi(x.dist)+'</b> miles</span><span><b>'+fmtFt(x.elev)+'</b> ft up</span><span><b>'+fmtTime(x.time)+'</b> moving</span><span><b>'+x.kcal.toLocaleString('en-GB')+'</b> kcal</span></div>'+
+      (d.notes?'<p class="notes">'+esc(d.notes)+'</p>':'')+
+      '<div class="links">'+d.acts.map((a,k)=>'<a class="btn" target="_blank" rel="noopener" href="https://www.strava.com/activities/'+a.id+'">Strava'+(d.acts.length>1?' ride '+(k+1):'')+' &nearr;</a>').join('')+
+        '<button class="btn" data-embed="'+i+'">Show Strava card</button></div>'+
+      '<div class="embed" id="embed-'+i+'"></div>'+
+      (photos.length?'<div class="gallery">'+photos.map((p,k)=>'<button data-day="'+i+'" data-k="'+k+'" aria-label="Open photo '+(k+1)+'"><img loading="lazy" src="'+esc(p.src)+'" alt="'+esc(p.caption||('Day '+d.n+' photo'))+'"></button>').join('')+'</div>'
+       :'<div class="nophotos">Photos for this day go in <code>'+dir+'</code>. Then list them under day '+d.n+' in <code>trips.js</code>.</div>')+
+      '</article>'}).join('');
+
+  document.getElementById('days').onclick=e=>{
+    const eb=e.target.closest('[data-embed]');
+    if(eb){const i=eb.dataset.embed,box=document.getElementById('embed-'+i);
+      if(box.innerHTML){box.innerHTML='';eb.textContent='Show Strava card';return}
+      box.innerHTML=t.days[i].acts.map(a=>'<div class="strava-embed-placeholder" data-embed-type="activity" data-embed-id="'+a.id+'" data-style="standard" data-from-embed="false"></div>').join('');
+      eb.textContent='Hide Strava card';
+      const old=document.getElementById('stravaJs');if(old)old.remove();
+      const s=document.createElement('script');s.id='stravaJs';s.src='https://strava-embeds.com/embed.js';document.body.appendChild(s);return}
+    const pb=e.target.closest('.gallery button');
+    if(pb)openLb(t.days[pb.dataset.day].photos,+pb.dataset.k)};
+}
+
+const lb=document.getElementById('lb');let lbList=[],lbK=0;
+function showLb(){const p=lbList[lbK];lb.querySelector('img').src=p.src;lb.querySelector('img').alt=p.caption||'';lb.querySelector('p').textContent=p.caption||''}
+function openLb(list,k){lbList=list;lbK=k;showLb();lb.showModal()}
+lb.querySelector('.x').onclick=()=>lb.close();
+lb.querySelector('.prev').onclick=()=>{lbK=(lbK-1+lbList.length)%lbList.length;showLb()};
+lb.querySelector('.next').onclick=()=>{lbK=(lbK+1)%lbList.length;showLb()};
+lb.addEventListener('click',e=>{if(e.target===lb)lb.close()});
+
+function route(){
+  const id=location.hash.slice(1), t=TRIPS.find(x=>x.id===id);
+  document.getElementById('home').classList.toggle('hidden',!!t);
+  document.getElementById('trip').classList.toggle('hidden',!t);
+  if(t){renderTrip(t);window.scrollTo(0,0)}
+  else if(id==='trips'||id==='about'){const el=document.getElementById(id);el&&el.scrollIntoView()}
+}
+renderHome();window.addEventListener('hashchange',route);route();
+</script>
+</body>
+</html>
