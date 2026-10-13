@@ -74,10 +74,23 @@ section{padding:44px 0}
 .btn{border:1px solid var(--rust);color:var(--rust);background:transparent;border-radius:8px;padding:6px 12px;font:500 .88rem var(--sans);cursor:pointer;text-decoration:none}
 .btn:hover{background:var(--rust);color:#fff}
 .embed{margin:6px 0 12px}
-.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:6px}
 .gallery button{border:0;padding:0;background:none;cursor:zoom-in;border-radius:10px;overflow:hidden;aspect-ratio:4/3}
 .gallery img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .2s}
 .gallery button:hover img{transform:scale(1.04)}
+.route{font-size:.9rem;color:var(--muted);margin:0 0 10px}
+.camp{background:#eef3ec;border:1px solid #cfdccb;border-radius:10px;padding:12px 14px;margin:0 0 12px}
+.camp h4{margin:0 0 2px;font:700 1.02rem var(--serif)}
+.camp .where{font-size:.85rem;color:var(--muted);margin-bottom:6px}
+.camp p{margin:0;font-size:.93rem}
+.camp .pass{font-size:.8rem;color:var(--moss);margin-top:6px}
+.hl{border-left:3px solid var(--rust);padding:2px 0 2px 12px;margin:0 0 12px;font-size:.93rem;font-style:italic;color:#43524a}
+.essentials{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px;margin:0 0 22px}
+.ess{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;font-size:.92rem}
+.ess h3{margin:0 0 8px;font:700 1.05rem var(--serif)}
+.ess table{border-collapse:collapse;width:100%}
+.ess td{padding:4px 8px 4px 0;vertical-align:top;border-top:1px solid var(--line)}
+.ess tr:first-child td{border-top:0}
 .nophotos{border:1.5px dashed var(--line);border-radius:10px;padding:12px 14px;color:var(--muted);font-size:.88rem}
 .nophotos code{background:#efe7d6;padding:1px 6px;border-radius:5px}
 dialog.lightbox{border:0;background:rgba(0,0,0,.92);max-width:100vw;max-height:100vh;width:100vw;height:100vh;padding:0;color:#fff}
@@ -125,6 +138,7 @@ footer img{width:56px;height:56px;border-radius:50%;flex:none}
   <h2 id="tName"></h2>
   <p class="lede" id="tBlurb" style="max-width:700px"></p>
   <div class="stats" id="tStats"></div>
+  <div class="essentials" id="tEss"></div>
   <div id="map" role="img" aria-label="Map of the route"></div>
   <div class="chips" id="chips"></div>
   <div class="days" id="days"></div>
@@ -191,6 +205,11 @@ function renderTrip(t){
     document.getElementById('chips').innerHTML='';document.getElementById('map').classList.add('hidden');return}
   document.getElementById('map').classList.remove('hidden');
   const tot=tripTotals(t);
+  const ess=[];
+  if(t.ferry)ess.push('<div class="ess"><h3>Ferry</h3><table>'+t.ferry.map(f=>'<tr><td><b>'+esc(f.leg)+'</b></td><td>'+esc(f.route)+'<br>'+esc(f.when)+'<br><span style="color:var(--muted)">'+esc(f.note)+'</span></td></tr>').join('')+'</table></div>');
+  const camps=t.days.filter(d=>d.camp);
+  if(camps.length)ess.push('<div class="ess"><h3>Where I slept</h3><table>'+camps.map(d=>'<tr><td><b>Night '+d.n+'</b></td><td>'+(d.camp.url?'<a target="_blank" rel="noopener" href="'+esc(d.camp.url)+'">'+esc(d.camp.name)+'</a>':esc(d.camp.name))+'<br><span style="color:var(--muted)">'+esc(d.camp.place)+'</span></td></tr>').join('')+'</table>'+(t.passNote?'<p style="margin:8px 0 0;font-size:.85rem;color:var(--muted)">'+esc(t.passNote)+'</p>':'')+'</div>');
+  document.getElementById('tEss').innerHTML=ess.join('');
   document.getElementById('tStats').innerHTML=[
     [fmtMi(tot.dist),'miles'],[fmtFt(tot.elev),'feet climbed'],[t.days.length,'riding days'],[fmtTime(tot.time),'moving time'],[tot.kcal.toLocaleString('en-GB'),'kcal burned'],
     [fmtMi(tot.dist/t.days.length),'miles / day']
@@ -227,6 +246,9 @@ function renderTrip(t){
       '<div class="meta">'+fmtDate(d.date)+' &middot; starting from '+esc(d.start)+'</div>'+
       '<div class="nums"><span><b>'+fmtMi(x.dist)+'</b> miles</span><span><b>'+fmtFt(x.elev)+'</b> ft up</span><span><b>'+fmtTime(x.time)+'</b> moving</span><span><b>'+x.kcal.toLocaleString('en-GB')+'</b> kcal</span></div>'+
       (d.notes?'<p class="notes">'+esc(d.notes)+'</p>':'')+
+      (d.route?'<p class="route"><b>Route:</b> '+esc(d.route)+'</p>':'')+
+      (d.camp?'<div class="camp"><h4>&#9978; '+(d.camp.url?'<a target="_blank" rel="noopener" href="'+esc(d.camp.url)+'">'+esc(d.camp.name)+'</a>':esc(d.camp.name))+'</h4><div class="where">'+esc(d.camp.place)+' &middot; '+esc(d.camp.type)+'</div><p>'+esc(d.camp.blurb)+'</p>'+(d.camp.pass?'<div class="pass">Natural Camping Pass needed</div>':'')+'</div>':'')+
+      (d.highlight?'<p class="hl">'+esc(d.highlight)+'</p>':'')+
       '<div class="links">'+d.acts.map((a,k)=>'<a class="btn" target="_blank" rel="noopener" href="https://www.strava.com/activities/'+a.id+'">Strava'+(d.acts.length>1?' ride '+(k+1):'')+' &nearr;</a>').join('')+
         '<button class="btn" data-embed="'+i+'">Show Strava card</button></div>'+
       '<div class="embed" id="embed-'+i+'"></div>'+

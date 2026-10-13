@@ -72,7 +72,17 @@ window.TRIPS = [
       "poly": "q{~}HyimZs@gByAqEYq@We@G?OF_AsA_CkCmAeAeAk@oA[q@KS@g@f@M@[]G_@GGm@[qEgAg@WWUUYO[a@qAB[D[@[AoEDWPY@YO_@{CuEo@w@mBiCc@e@_@WuCmBuA{AmDeEYa@wBkDmBmDgAwAcAcBuBeD_AmAwB_Cw@s@{AaAUGaAi@sAe@cAm@}DmDaBuAqAqAuG}FaGcEqAqAkAoAeBaB}CiCy@y@}D{CuBiBoA_AsGoGyFiGSOOGOAKDUEWY_@y@cBiAm@k@bA|@~AnAHf@IVQpAO`@GZg@jAUt@Mp@K`BAnABvDBDVA?b@IjDALM`@AJKdEK~B"
      }
     ],
-    "notes": "Night ferry from Harwich, off at the Hook of Holland at 08:00, then the car-free dune path north to the campsite at Noordwijk."
+    "notes": "Night ferry from Harwich, off at the Hook of Holland at 08:00, then the car-free dune path north to the campsite at Noordwijk.",
+    "route": "Hoek van Holland terminal, LF1 dune path north, Scheveningen, Meijendel dunes, Katwijk, Noordwijk.",
+    "highlight": "The dune path north from Hoek van Holland is entirely car-free: open sea to the west, glasshouse farms and nature reserves to the east.",
+    "camp": {
+     "name": "Natuurkampeerterrein De Ruigenhoek",
+     "place": "Vogelaardreef 31, Noordwijk",
+     "type": "Nature campsite, dunes",
+     "blurb": "On the southern edge of the Amsterdamse Waterleidingduinen, one of the finest dune nature reserves in the Netherlands. Spacious pitches, clean facilities and walking straight from the site into the dunes.",
+     "url": "https://goedkamp.nl/ruigenhoek",
+     "pass": true
+    }
    },
    {
     "n": 2,
@@ -115,13 +125,23 @@ window.TRIPS = [
       "poly": "{td~Hu}oZwLh\\kCzMLlWjHjVrRv`@[`KeBbD{I~DkAlVwC|H_`@xTiHwE}JsNqLgFoRoUcVmAuJkJcWaN}Zu`@gLuDiH\\wq@gd@{^uLgQsMmUsX_D_@{DrC{GuGaJJgGeEgMwQaL_IqUy@wf@c_@yAj@aMqFeD{F`BkO[aJsFyAeCvLVuCyGuH_B|EwEC_CaAoG|F_h@cYwDiGsGd@of@{Z{p@e\\_GeFgJkXuB__@lBcKbRa]~Dyg@hKy`@ZqOyEyh@rSyp@lCw\\uI~FwC}@_BsEgIW}KbIuEcCwBuIsG}AyFgJ}AgOyW{MeLwQmKxD}QcXuAoGyAqWnBqGfDmByGpAgDzIcDhAuKeH?aNcJfB_KsFmFmRcJ{O{AsLuLoHqL}\\mJAwb@qB{S^yA}@sZwc@y@tBYcBec@iJeCrEiH|C}B{A_BuGoNvFDhAqAsAYvKrAlRoBr@vBa@HrA{EMkAfEwJwB_Mv@uIuC{LqQiIyRoMhQmHhCm@oLqLid@zFkMbCkO}GuMpAqEaBtDu@s@}JoWia@ar@{PaOl@eBaAdAzMyUfTqPkB|Am@cCcBSc@kUlFdCtDnNeFzFo@iCgBUm@gU~HxD}@uBoJ_D_iAi}AkTnm@cEhA_U|[sd@oiAyL{QiE{OiM{SzAaKcRgVgEp@gB|EzLiYHeNjQmSroAuuCoIcQqF_CsEqKuHeDwBcL{B_C_SuC}YbU{CYb@eS}BoIyF{HYsGt\\c}AGiI|@kCqAcSOgk@uSuDo@mKcMyAhCE^gb@}@aJo[qb@gFii@o[wf@sB_HwDgr@qOkXo[wt@eKkE|AaMuHkLkH_WcTmJ_Vu\\e]yTwHqIaPu]mPqNsOkHkYy@uZ{MgMiSkEeTMwMoSab@wHsE}MkUiKwH_YwGcWaMyPuQqAuE{Ce@k[mi@qFmSvNsdAqi@mZlEw`@jLwQtYacBycAun@qPqOU|B~AiEk@yJ}Bq@iResCqKavBqEyf@TmEkAwBuF_j@wYwBiKqFcKuA{EaFqJ}r@qJkTeEkf@A}MoNeL{J}Q}BsJoBiS|D__@gCwSkBLj@aNci@hUwCyIiI`FsB}JZcH{BuJsA{@yF{h@gc@chBwArB^jCFyEHfAPoDhBoDvDaGuEyRsBfCY~H{A~AoBs@`@gBgV__BwIfLwS|MyDpHkB{Ds@qNkk@e~DuDyMq\\vVcSbQu@nFmTfN_l@pj@_wA{jFuqAvd@sCwDoBhHcz@x\\kBHImEc@bFyJfEsLhTvJrPrO|h@"
      }
     ],
-    "notes": "North through the bulb country and into the West Frisian polders, finishing near Medemblik."
+    "notes": "North through the bulb country and into the West Frisian polders. A wet start, with the waterproofs on.",
+    "route": "Noordwijk, north through the Bollenstreek bulb fields, across the Haarlem hinterland and into West Friesland by polder lanes, to Wervershoof near Medemblik.",
+    "highlight": "The West Frisian polder is classic Dutch farming country: stolp farmhouses, knooppunten signs on every corner and canal ferries that have run the same crossing for centuries.",
+    "camp": {
+     "name": "Camping Ariënstocht",
+     "place": "Wervershoof, near Medemblik",
+     "type": "Campsite, West Friesland",
+     "blurb": "Campsite in the West Frisian polders, near Medemblik.",
+     "url": "",
+     "pass": false
+    }
    },
    {
     "n": 3,
     "date": "2026-09-14",
     "title": "Across to Flevoland",
-    "start": "Oostwoud",
+    "start": "Wervershoof",
     "photos": [
      {
       "src": "photos/netherlands-2026/20260914_100223.jpg",
@@ -150,7 +170,17 @@ window.TRIPS = [
       "poly": "mf{`Icbi^gA}F{I}S_BkIeDaDyDqL`MsQlKoDKiJG`Gd@x@bc@yObYyM^q@FmDn@}@hBjDbAVtpAie@xEnOxa@aYbJoFzWyI|R{BnHmEnImK`IaDcEu_@yG{x@wM{mAeBg_@mDmmA~Ag[hBau@p@}e@[uSPw@Qe@kEPWyNjEcAuBmu@_Dyn@b@aAzEeAhZeAz^iAr@lBbBg@LsFnA@LbA[x@YSaAgOJ{XaCqQqB}IoWyk@kHyJBgBcH}MpKe[lQw_@z@oHB_FmCq[HkHw@kRC_SZ}H~u@chEf\\alBzHgZjG}OnMcVvGyOjzBi|DvKuPlhAgjAxBeDhF{D~P_SxFuE~yEy~ElQoQtL_Ih}Bm|@~Ds@zGd@xEhCfCvCtEpKjMbbAtIb^fHvQfRzYlQrOzbBnbArSzFvd@rC[bEPpCjBpBhAGfAoAt@mF^w[UsFr@iLTwYWoA}@Ti@tIV`E^ZWeBTWve@{BvGoCdDwCPqIh@mCpAoBhCg@pBz@vGpFxHhGtQtRlO|h@pC`ErKjXj@|@bDr@bEFxDpMjApBzBtAj@s@Y\\a@cDtBwHbWaa@|@gAr@~@VSvA{GrIeL|f@dBpC_@zB|FfDwFbC`AfErKpE`HnXzi@|BpG~ErWbUqPfHsC|iAn@bHo@lEgChLoOzGsPz@}@xEzEdM`F`HfH|DrIxPdh@lFlJtGbFfTtEvJjDpS~LvK|JjQvS|DdJxElLtNoOhP_TjEoDhIeDzCuC}@}ENs@zt@h|BnYrx@h`@hcAvj@f`BjMwNfEsG~EcA`IcJfAiBzAsGz\\ub@dHoHnCOlCuApEsFnBiDpBeJbHeJlCBlJgHnEcLpI}JlA_AtEo@|EcEnA_IvCsCv@{BtEgAbMqOpE_CvGeG`BiC?qFt@gDfGsHtAcAhG]r@}@tBqIzIcJtHaDzHoJhCs@rHkJdAiJlMgSpUoY`ExAjS}VZuJ|HwJ`DqBPiAYeBj@w@\\Qj@pAvDkCl_@sb@nD_GkCfFfQiRbGwDtLiEDqA`CwAsAsOTcAtL{E`H}E`k@wo@VkAyHaZvCeF~FuCF{I\\wBbDgJlGsMsA}J|ByEbL}D~N~Mv_@wKdNvCjg@ySrDeFvAyHfBfApDrG`DgAzAqBfD_AzDlAtExEnDYVpBv@Wr@pCOxBwB|@@n@zEja@vAdTDlPg@|PvG~JyEbPgCbO{A`O?nGnHv@FzCpTnKv@zCnOfHt\\{PxFdPjBnRs@vAp@kA`AUx@dAEvADy@"
      }
     ],
-    "notes": "Round the IJsselmeer coast and across into Flevoland, camping in the forest at Zeewolde."
+    "notes": "Round the IJsselmeer coast and across into Flevoland, camping in the forest at Zeewolde.",
+    "route": "Wervershoof, down the IJsselmeer coast, across into Flevoland, through the Horsterwold forest to Zeewolde.",
+    "highlight": "Flevoland is the world's largest artificial land, reclaimed between 1942 and 1968. The Horsterwold and Hulkesteinse bos together form the largest contiguous broadleaf forest in Western Europe, on what was open sea sixty years ago.",
+    "camp": {
+     "name": "Natuurcamping De Altena",
+     "place": "Hulkesteinse bos, Zeewolde, Flevoland",
+     "type": "Forest campsite",
+     "blurb": "Six separate field-sized camping areas shielded by the forest. 60 pitches, quiet and solar-powered, with lakeside swimming beaches on the Nijkerkernauw about 1.25 km away.",
+     "url": "",
+     "pass": false
+    }
    },
    {
     "n": 4,
@@ -209,7 +239,17 @@ window.TRIPS = [
       "poly": "c|_~Hs|c`@kUdMoOyHq@qCuTsK[mD}G[e@tCvAbc@hE|Yb^vlAjK|[|[~dA`EpQnBvTlAJQh^aF`^isD|oHeg@thApPka@a@g@eJdFiFVqAo@gBiVaOwsAeEpAyIbAsKlJ{CxFuJhYwDvQfGrHtLfFp\\`m@vWpm@dYr|@`GhVo@bAz@m@hBrGbBjICrFdAnH~H`O`Q`p@rEzIhPhShMzWlOdUTxN`AfCdCbBqDdT@pDzc@tl@lRp]aBoCq@fAJfIkChFnBnHl@~I`DiB|BvHlAlI~F_EnFiInWjZhIhNjOaRnJxFrEeCjFWnLrGtCyd@v@_AtBzC`GrAnp@jd@vBnIrCu@dIfItEf@`FrDbQdXlCtBKbEbErKNfDYnCsCdGa@jHL|@rAYu@fAbBnCh@iHfB_CyItGqCzJmIjM_HhHmGtKmL~IgAyIYsP~CkE^aKxAeI_DkFdDgEnRac@p@gOrB_FvKvPtC|BQpDxDfLFhGeDpHAfJzJ_HzHA|G`BtIe@bH_CjPIhMpJtFlKdBh@ZwFWaE^qAjFjE_GqFG_H|uAve@tAw@dAxBnB@xDjCrp@bj@jHfEf{AfpApJiC`Dl\\w@bp@|VdNbCiPx@c@hzAns@bLfDtK`@fHjDr@~AbAm@~@mGvDrCk@~EmEaByAz@{CfPkAvA|@BrGpCC~BYiC{GqB|@yA~BqOp@eAkArBeCjN_DpCeH}BqE`EoGqAs@dUz@pAlo@d]zHlBvA~BfOvH|P`HdBQdAtCfN`JloAtk@zEfJbCrAuAtBqMnx@hbAfj@jS`_@cEhWfIxOa@b@b@pBaTla@xG|HhRn[dRfc@ba@bq@l@g@nK|O`Z|D_@xKv@zDeBvF_Cbz@rBrE~Lto@c@tPAlc@oAhh@f@fKhAfHWkCvNbFvPtBrBdEjAOr@jClEtFlDzA~AHbAyDr@EvBzFbBzJjBlCzEhCiQxfBo@nAkIcDs@hGpEdBd@yCm@~CoEmBW`LcA`LhEjC_AjImEwBQz@jIfFiRlkBcB~Y|Lvm@~@j`@uBz]wClIlAxB}Lpa@PpDfDfBb@bC^dI{B|@|B|VmDvPwI|RvGxLlo@t_AP|BxAzAwA~EjChNsJlNhj@tbBtDgBnGGrF}E|ByN|LmZzI{[lC}FnMn^X`B_AnBfCzH~Nz[dBnA{@FtFhMe@`H_CdEmDdLsDbFdQrChEeD|@CbAp@~@nBjDlLvCnAlGaAtNyGtB?vAzCfGrc@xF|R"
      }
     ],
-    "notes": "Back south through the Utrecht Green Heart to a small orchard campsite at Snelrewaard."
+    "notes": "Back south through the Utrecht Green Heart to a small orchard campsite at Snelrewaard.",
+    "route": "Zeewolde, south-west into Utrecht province, through the Lopikerwaard along the Lange Linschoten, to Snelrewaard.",
+    "highlight": "The Lopikerwaard is the Netherlands that most visitors never see: peat meadows, dike farms and river crossings, a working landscape of dairy farms, cheese dairies and orchards.",
+    "camp": {
+     "name": "Natuurkampeerterrein De Oude Boomgaard",
+     "place": "Zuid-Linschoterzandweg 21, Snelrewaard",
+     "type": "Nature campsite, farm orchard",
+     "blurb": "A very small, peaceful campsite in an old farm orchard of apple, pear, plum and walnut trees, with animals on site. Tents are welcome, though there are only a few pitches.",
+     "url": "https://oude-boomgaard.nl",
+     "pass": true
+    }
    },
    {
     "n": 5,
@@ -268,7 +308,17 @@ window.TRIPS = [
       "poly": "g}s|Hg~z\\tMdI~@rGcAzOrAdD~RcBhNtTlKaDdDB|KhN`Dp@dMyAfDfE}@|Sx@bGnHzOTrU|B~FhErD|CjGwA~IvAaJsBbLFlY`EtQ`IzPhCvNz@jIYbXdAzNtP`e@Xh}@YjN_CxXNxN|EdVnKtRn@~p@nDdb@hEhStI~UdHhHhJ|DfHbQhPvXb@|EiA`HuAn[TbRzKoGs@aFlDiBzA^bE{FjX{PrDgJlI}DjEgEjJxUzSqLpRnlAfAje@^`@b\\qQbXad@]{ApCcFtBqCzA?~Dda@a@zE|@x@d@fEDcCpAfQdFz\\`e@rqAlJ~\\daAfvCt@~@~RcGz@|@~kAlaEn@fGxXj[fPs_@hW~@d@fY`BxJ~Nbh@lMvm@zCvCdE~KdB|IwAxHh@r@jAi@VvQoGhh@`@bDdDvHtHlMxLpK\\xFzEYPgExEwBz~@fPNtDwGle@e@bCwBnD`XrHLlEvGnBhBqNlDhBbKhR~TzC~M}BrIkRtCtA~FmCzCnFBp@sDgHyEnCyAOoKgU{Fa@_C_Eg@kJf@{J`AiDEzBnAc@eAp@CgCeAnDi@fNp@vG}@LO~EsC~IyAlQLhBvEjMeAdUNhGrAxG`FfMdB`@lH_HbCnFc@vA`BrFe@vEmDIgEzDoKx[KzYnA|Gv@xTa@jNeG`h@wEpTmE`KhA|Bn[jJxCiCpG|@eEfNZlDy@~[fAf_@CxSnCfL~ChZ}@cGrFI`GuDnEfAbBm@pCaFbKUEbJhApOhLz^xEvUh@nJjKz]W`CaKtG~Jta@|PdRkIj\\\\PpBcHjK_B_@|Ka@z~@PlfFnUfGpVeGz@l@ZdCtCYrDu@CrBfNjYdE|Co@tDhOp]bDcAvA~GuLfYlGfP`EnPjAxPjDsGr@?jFjo@eEpl@Jla@[kAD`e@{@rD\\hVhG~NQxDiCtEjCbI|Bt@k@sB~SsGVlAzBNrJcArBjGmCbPeIxFoChJv@vEOtSmBdFwBv[qAbEuD|_@aKbI_BfDoWjSo@nA}AvTv@nBo@iBlA_@vJlWdDtK_@rDnShOtItDc@fIlJnBaO`tA{Gn\\iEpE[|HyFjO_f@|f@wDlGaClBaFrB`A|HnLl_@tC|Fb@QuCiIcBvAfDhKmQ{l@iDsUbDxTnB~Gxd@fxArBrMpAWnHlo@n@nAfEng@xEqAzE~N|EhJbe@nj@vIvU|Elf@fCfKrFbJpPtKPhDlD`Gjo@pgDb@fWgClkAbBxC"
      }
     ],
-    "notes": "Canals, windmills and little ferries, down to the polders of Voorne-Putten."
+    "notes": "Canals, windmills and little ferries, down to the polders of Voorne-Putten.",
+    "route": "Snelrewaard, south-west towards the Lek and Schoonhoven, across to Voorne-Putten, to Zuidland.",
+    "highlight": "The old tram-path cycle route across Voorne-Putten is flat and fast, cutting straight through the middle of the island past farms and bird hides.",
+    "camp": {
+     "name": "Natuurcamping De Kersengaard",
+     "place": "Ramshilseweg 4, Zuidland",
+     "type": "Nature campsite, polder",
+     "blurb": "Between the Bernisse recreation area and the Beninger Slikken tidal reserve, in quiet polder with the old tram cycle path 250 m away. Showers, electricity and a fridge. Open 1 April to 31 October.",
+     "url": "https://de-kersengaard.nl",
+     "pass": true
+    }
    },
    {
     "n": 6,
@@ -311,9 +361,27 @@ window.TRIPS = [
       "poly": "aai{H_wzXgAyAGFmAfm@mAzQo@t`@?vGSzNDvA[`Ba@vOwK`gB?xASv@m@dKk@rGgAxHYt@K`AqEzQkApF_NuH{JaAcD_AwIsAiIo@_IgB{@m@}@gAy@iBuBoH]oBcAcOSkJcAiIUOwHN{FGeRsGoJkAAf@N`D[pE_CpLiAdEkBlFk@`DWJmAkDMGcAhAINA^r@pCA^gJjP}C`EoDfDeD~D}@l@cBj@}FLkDq@aD}BqGuCmAQeGwG}BiBsCsDqDyGaAkFyBmG]kBmBuNsA}KWIoBp@kELaEY}Do@K_@Bc@~AiHZ_DByBEcDSwB]yCi@qB_DqD}B}DwIaKsAuAaE{CsDiBm@{@cAiCQkBb@mGReKNsAAuC_@gDTqAEo@q@Sq@yAyAyA{FwCm@}@[KkCqD}BwBcBKq@ZoOnKyNhTeBvCi@vAi@~B[bEq@lEQtMIz@w@rCeCjFkA`G[p@y@bAe@ZeAHo@S}F_F{@_@u@No@f@wBrCcB|CmGlIcCn@GNBx@Rv@fDvHbCrEJd@IJ{JsQ{HwOo@qAe@sCqCiC{EgHYg@Ii@xCuHjBoGtAcHpAgKIkAFkKEqCKe@a@y@m@uFIqABq@w@{KgAeSF}Ch@sCf@c@b@RCtFWrAkAt@{BXeAwRjAgEGOgJwKuCaEiAo@wDaFqHiIqGsGAUx@{Cb@kCG{AeAgHSwBYsAW[wBBeB]QXW~AcBhNO^y@c@c@_@?kHU}Ao@uBeA}AmCyCoBoEyAgCmAaDk@UgAcAq@wAqDiE{@w@o@U_BVaAtAuAfEc@Zc@Mg@m@g@gA[MSNOz@_EkEqFmHuBkE]Y[iAsB_@MORKj@JAb@gBq@BXRYhCb@XSQd@PlAfFvJh@n@bBjAf@o@De@z@o@t@lBfArE@d@XNXq@F@\\z@`Ax@BRVFb@xCe@rAs@b@uB`HfFvLN`@@n@`@Al@hACn@}DlKwAxCcDhG{C~EaMhO_c@be@_EbFgFbI_F|IkEzIaDpHwGxP{G~SeIb[yAlEoOpn@oIr\\gGvU_GjSoKn[cWxp@gNt]OHQIy@sAFi@d@kAEg@aADc@XmCrG]jBSj@uQb_@i@hBeAjFIfLKd@iOb]a[pt@MJ_@KiAeBcA}@yDxMODg@eAQLYr@g@Hk@m@eAb@Gl@VbHOdAsIdYoCxEqF`PqBnEwB|GsApHQ`D_@nB]fAqAnBqGvRERVl@"
      }
     ],
-    "notes": "A short run back to the Hook of Holland, then the afternoon ferry home."
+    "notes": "A short run back to the Hook of Holland, then the afternoon ferry home.",
+    "route": "Zuidland, over Voorne-Putten, along the Brielse Meer waterway to the Stena Line terminal at Hoek van Holland. Ferry 14:15, Harwich 19:45.",
+    "highlight": "The Brielse Meer waterway is always busy with coasters and container ships, a fine send-off."
    }
-  ]
+  ],
+  "ferry": [
+   {
+    "leg": "Outbound",
+    "route": "Harwich to Hoek van Holland",
+    "when": "Fri 11 Sep, 23:00 to Sat 12 Sep, 08:00",
+    "note": "Stena Line overnight, 2-berth inside cabin with the bike"
+   },
+   {
+    "leg": "Return",
+    "route": "Hoek van Holland to Harwich",
+    "when": "Thu 17 Sep, 14:15 to 19:45",
+    "note": "Stena Line, single inside cabin with the bike"
+   }
+  ],
+  "passNote": "De Ruigenhoek, De Oude Boomgaard and De Kersengaard all need a Natuurkampeerkaart (Natural Camping Pass) from Stichting Natuurkampeerterreinen. One pass covers all three.",
+  "passUrl": "https://www.natuurkampeerterreinen.nl"
  },
  {
   "id": "rebellion-way-2026",
