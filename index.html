@@ -3,8 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Solo Misanthrope’s Bikepacking Log</title>
-<meta name="description" content="Bikepacking adventures: routes, stats from Strava, and photos.">
+<title>The Lone Cycle Tourist</title>
+<meta name="description" content="The Lone Cycle Tourist: solo bikepacking adventures with routes, Strava stats and photos.">
+<meta property="og:title" content="The Lone Cycle Tourist">
+<meta property="og:description" content="Solo bikepacking adventures: routes, Strava stats and photos.">
+<meta property="og:image" content="img/banner.jpg">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/logo-badge.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -23,10 +28,15 @@ a{color:var(--rust)}
 header.site{background:var(--moss);color:#f4efe6}
 header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 20px}
 header.site a{color:inherit;text-decoration:none}
-.brand{font:700 1.25rem var(--serif)}
+.brand{font:700 1.25rem var(--serif);display:flex;align-items:center;gap:10px}
+.brand img{width:42px;height:42px;border-radius:50%;display:block;background:#f4efe6}
 nav a{margin-left:18px;font-size:.95rem;opacity:.9}
 nav a:hover{opacity:1;text-decoration:underline}
-.hero{background:linear-gradient(180deg,var(--moss) 0,#4a6b4d 100%);color:#f4efe6;padding:48px 0 64px}
+.hero{background:linear-gradient(180deg,var(--moss) 0,#4a6b4d 100%);color:#f4efe6;padding:40px 0 48px}
+.hero .wrap{display:flex;align-items:center;gap:36px}
+.hero .badge{width:clamp(150px,22vw,230px);height:auto;border-radius:50%;flex:none;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+.banner{display:block;width:100%;height:auto;border-radius:14px;margin-top:22px;border:1px solid var(--line)}
+.tripmark{float:right;width:84px;height:84px;border-radius:50%;margin:0 0 8px 16px}
 .hero h1{font:700 clamp(2rem,6vw,3.4rem)/1.1 var(--serif);margin:0 0 12px}
 .hero p{max-width:620px;margin:0;font-size:1.1rem;opacity:.92}
 h2{font:700 1.8rem var(--serif);margin:0 0 6px}
@@ -79,19 +89,23 @@ dialog.lightbox::backdrop{background:#000}
 .lb .x{top:14px;right:14px}.lb .prev{left:14px;top:50%}.lb .next{right:14px;top:50%}
 footer{padding:30px 0 50px;color:var(--muted);font-size:.88rem;border-top:1px solid var(--line)}
 .hidden{display:none}
-@media(max-width:600px){#map{height:340px}nav a{margin-left:12px}}
+footer .wrap{display:flex;align-items:center;gap:14px}
+footer img{width:56px;height:56px;border-radius:50%;flex:none}
+@media(max-width:700px){.hero .wrap{flex-direction:column;text-align:center;gap:20px}}
+@media(max-width:600px){#map{height:340px}nav a{margin-left:12px}.brand span{font-size:.95rem}.brand img{width:36px;height:36px}}
 </style>
 </head>
 <body>
 <header class="site"><div class="wrap">
-  <a class="brand" href="#" style="font-size:1.1rem">The Solo Misanthrope’s Bikepacking Log</a>
+  <a class="brand" href="#"><img src="img/logo-small.png" alt="The Lone Cycle Tourist logo"><span>The Lone Cycle Tourist</span></a>
   <nav><a href="#trips">Adventures</a><a href="#about">About</a></nav>
 </div></header>
 
 <div id="home">
   <div class="hero"><div class="wrap">
-    <h1>Panniers packed, people avoided.</h1>
-    <p>A log of multi-day rides: where I went, how far, how hilly (not very, in Holland) and what it looked like.</p>
+    <img class="badge" src="img/logo-badge.png" alt="The Lone Cycle Tourist: a cyclist with loaded panniers on a gravel track">
+    <div><h1>Panniers packed, people avoided.</h1>
+    <p>The Lone Cycle Tourist: a log of solo multi-day rides. Where I went, how far, how hilly (not very, in Holland) and what it looked like.</p></div>
   </div></div>
   <section id="trips"><div class="wrap">
     <h2>Adventures</h2>
@@ -101,11 +115,13 @@ footer{padding:30px 0 50px;color:var(--muted);font-size:.88rem;border-top:1px so
   <section id="about" style="padding-top:0"><div class="wrap">
     <h2>About this site</h2>
     <p class="lede" style="max-width:640px">Distances, climbing and routes come straight from Strava. Photos live in the <code>photos</code> folder alongside this page. Edit <code>trips.js</code> to add notes, retitle days or add new adventures.</p>
+    <img class="banner" src="img/banner.jpg" alt="The Lone Cycle Tourist: a cyclist with loaded panniers on a gravel track through moorland, inside a tyre-edged badge">
   </div></section>
 </div>
 
 <div id="trip" class="hidden"><div class="wrap" style="padding-top:30px">
   <a class="back" href="#trips">&larr; All adventures</a>
+  <img class="tripmark" src="img/logo-small.png" alt="">
   <h2 id="tName"></h2>
   <p class="lede" id="tBlurb" style="max-width:700px"></p>
   <div class="stats" id="tStats"></div>
@@ -114,7 +130,7 @@ footer{padding:30px 0 50px;color:var(--muted);font-size:.88rem;border-top:1px so
   <div class="days" id="days"></div>
 </div></div>
 
-<footer><div class="wrap">Route data from Strava. Map &copy; OpenStreetMap contributors.</div></footer>
+<footer><div class="wrap"><img src="img/logo-small.png" alt="The Lone Cycle Tourist logo"><div><b>The Lone Cycle Tourist</b><br>Route data from Strava. Map &copy; OpenStreetMap contributors.</div></div></footer>
 
 <dialog class="lightbox" id="lb"><div class="lb">
   <button class="x" aria-label="Close">&times;</button>
