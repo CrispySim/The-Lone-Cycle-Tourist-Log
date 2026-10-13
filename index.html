@@ -78,6 +78,7 @@ section{padding:44px 0}
 .gallery button{border:0;padding:0;background:none;cursor:zoom-in;border-radius:10px;overflow:hidden;aspect-ratio:4/3}
 .gallery img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .2s}
 .gallery button:hover img{transform:scale(1.04)}
+.gh{margin:14px 0 8px;font:600 .9rem var(--sans);color:var(--moss);text-transform:uppercase;letter-spacing:.05em}
 .route{font-size:.9rem;color:var(--muted);margin:0 0 10px}
 .camp{background:#eef3ec;border:1px solid #cfdccb;border-radius:10px;padding:12px 14px;margin:0 0 12px}
 .camp h4{margin:0 0 2px;font:700 1.02rem var(--serif)}
@@ -191,7 +192,7 @@ function renderHome(){
     const live=t.days.length>0, tot=live&&tripTotals(t);
     return '<a class="trip-card" href="#'+t.id+'"><div class="mini">'+(live?miniSvg(t):'<div class="soon">Rides to be added</div>')+'</div>'+
       '<div class="body"><h3>'+esc(t.name)+'</h3><div class="dates">'+esc(t.dates)+'</div><p>'+esc(t.blurb)+'</p>'+
-      (live?'<div class="figs">'+fmtMi(tot.dist)+' miles &middot; '+fmtFt(tot.elev)+' ft climbed &middot; '+t.days.length+' days</div>':'')+'</div></a>';
+      (live?'<div class="figs">'+fmtMi(tot.dist)+' miles &middot; '+fmtFt(tot.elev)+' ft climbed &middot; '+(t.single?t.nights+' nights':t.days.length+' days')+'</div>':'')+'</div></a>';
   }).join('');
 }
 
@@ -210,17 +211,19 @@ function renderTrip(t){
   const camps=t.days.filter(d=>d.camp);
   if(camps.length)ess.push('<div class="ess"><h3>Where I slept</h3><table>'+camps.map(d=>'<tr><td><b>Night '+d.n+'</b></td><td>'+(d.camp.url?'<a target="_blank" rel="noopener" href="'+esc(d.camp.url)+'">'+esc(d.camp.name)+'</a>':esc(d.camp.name))+'<br><span style="color:var(--muted)">'+esc(d.camp.place)+'</span></td></tr>').join('')+'</table>'+(t.passNote?'<p style="margin:8px 0 0;font-size:.85rem;color:var(--muted)">'+esc(t.passNote)+'</p>':'')+'</div>');
   document.getElementById('tEss').innerHTML=ess.join('');
-  document.getElementById('tStats').innerHTML=[
+  document.getElementById('tStats').innerHTML=(t.single?[
+    [fmtMi(tot.dist),'miles'],[fmtFt(tot.elev),'feet climbed'],[t.nights,'nights camping'],[fmtTime(tot.time),'moving time'],[tot.kcal.toLocaleString('en-GB'),'kcal burned']
+  ]:[
     [fmtMi(tot.dist),'miles'],[fmtFt(tot.elev),'feet climbed'],[t.days.length,'riding days'],[fmtTime(tot.time),'moving time'],[tot.kcal.toLocaleString('en-GB'),'kcal burned'],
     [fmtMi(tot.dist/t.days.length),'miles / day']
-  ].map(([v,l])=>'<div class="stat"><b>'+v+'</b><span>'+l+'</span></div>').join('');
+  ]).map(([v,l])=>'<div class="stat"><b>'+v+'</b><span>'+l+'</span></div>').join('');
 
   if(!map){map=L.map('map',{scrollWheelZoom:false}).setView([52.3,5],8);
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:18,attribution:'&copy; OpenStreetMap contributors'}).addTo(map)}
   layers.forEach(l=>map.removeLayer(l));layers=[];
   const groups=t.days.map((d,i)=>{
     const g=L.featureGroup(d.acts.map(a=>L.polyline(decode(a.poly),{color:COLORS[i%COLORS.length],weight:4,opacity:.9})));
-    g.bindTooltip('Day '+d.n+': '+d.title,{sticky:true});g.addTo(map);layers.push(g);return g});
+    g.bindTooltip((t.single?'':'Day '+d.n+': ')+d.title,{sticky:true});g.addTo(map);layers.push(g);return g});
   const first=decode(t.days[0].acts[0].poly)[0], lastD=t.days[t.days.length-1], lastA=lastD.acts[lastD.acts.length-1], lp=decode(lastA.poly);
   layers.push(L.circleMarker(first,{radius:7,color:'#fff',weight:2,fillColor:'#2e7d32',fillOpacity:1}).bindTooltip('Start').addTo(map));
   layers.push(L.circleMarker(lp[lp.length-1],{radius:7,color:'#fff',weight:2,fillColor:'#c62828',fillOpacity:1}).bindTooltip('Finish').addTo(map));
@@ -228,7 +231,7 @@ function renderTrip(t){
   const fitAll=()=>map.fitBounds(all.getBounds(),{padding:[20,20]});
   setTimeout(()=>{map.invalidateSize();fitAll()},0);
 
-  const chips=document.getElementById('chips');
+  const chips=document.getElementById('chips');chips.classList.toggle('hidden',!!t.single);
   chips.innerHTML='<button class="chip" data-i="-1" aria-pressed="true">Whole trip</button>'+
     t.days.map((d,i)=>'<button class="chip" data-i="'+i+'" aria-pressed="false"><i style="background:'+COLORS[i%COLORS.length]+'"></i>Day '+d.n+'</button>').join('');
   chips.onclick=e=>{const b=e.target.closest('.chip');if(!b)return;const i=+b.dataset.i;
@@ -242,8 +245,8 @@ function renderTrip(t){
     const photos=d.photos||[];
     const dir='photos/'+t.id+'/';
     return '<article class="day" id="day-'+i+'" style="border-left-color:'+col+'">'+
-      '<h3>Day '+d.n+': '+esc(d.title)+'</h3>'+
-      '<div class="meta">'+fmtDate(d.date)+' &middot; starting from '+esc(d.start)+'</div>'+
+      '<h3>'+(t.single?'':'Day '+d.n+': ')+esc(d.title)+'</h3>'+
+      '<div class="meta">'+(d.dateText||fmtDate(d.date))+' &middot; starting from '+esc(d.start)+'</div>'+
       '<div class="nums"><span><b>'+fmtMi(x.dist)+'</b> miles</span><span><b>'+fmtFt(x.elev)+'</b> ft up</span><span><b>'+fmtTime(x.time)+'</b> moving</span><span><b>'+x.kcal.toLocaleString('en-GB')+'</b> kcal</span></div>'+
       (d.notes?'<p class="notes">'+esc(d.notes)+'</p>':'')+
       (d.route?'<p class="route"><b>Route:</b> '+esc(d.route)+'</p>':'')+
@@ -252,7 +255,7 @@ function renderTrip(t){
       '<div class="links">'+d.acts.map((a,k)=>'<a class="btn" target="_blank" rel="noopener" href="https://www.strava.com/activities/'+a.id+'">Strava'+(d.acts.length>1?' ride '+(k+1):'')+' &nearr;</a>').join('')+
         '<button class="btn" data-embed="'+i+'">Show Strava card</button></div>'+
       '<div class="embed" id="embed-'+i+'"></div>'+
-      (photos.length?'<div class="gallery">'+photos.map((p,k)=>'<button data-day="'+i+'" data-k="'+k+'" aria-label="Open photo '+(k+1)+'"><img loading="lazy" src="'+esc(p.src)+'" alt="'+esc(p.caption||('Day '+d.n+' photo'))+'"></button>').join('')+'</div>'
+      (photos.length?photos.map((p,k)=>(p.group&&p.group!==(photos[k-1]||{}).group?(k?'</div>':'')+'<h4 class="gh">'+esc(p.group)+'</h4><div class="gallery">':(k?'':'<div class="gallery">'))+'<button data-day="'+i+'" data-k="'+k+'" aria-label="Open photo '+(k+1)+'"><img loading="lazy" src="'+esc(p.src)+'" alt="'+esc(p.caption||('Photo '+(k+1)))+'"></button>').join('')+'</div>'
        :'<div class="nophotos">Photos for this day go in <code>'+dir+'</code>. Then list them under day '+d.n+' in <code>trips.js</code>.</div>')+
       '</article>'}).join('');
 

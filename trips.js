@@ -386,9 +386,57 @@ window.TRIPS = [
  {
   "id": "rebellion-way-2026",
   "name": "The Rebellion Way",
-  "dates": "June/July 2026",
-  "blurb": "373 km (232 miles) of Norfolk, ridden solo with camping gear. Strava rides still to be added.",
-  "status": "stub",
-  "days": []
+  "dates": "1-5 July 2026",
+  "blurb": "A solo loop of the Rebellion Way, Norfolk's long-distance bikepacking route, ridden over four nights with camping gear and recorded as a single Strava activity: \"Stay Rebellious\".",
+  "status": "done",
+  "days": [
+   {
+    "n": 1,
+    "date": "2026-07-01",
+    "dateText": "1-5 July 2026",
+    "title": "Stay Rebellious",
+    "start": "Norwich",
+    "notes": "Four nights camping on a loop of Norfolk, from Norwich out through the heathland and forest, round the coast and back again.",
+    "photos": [
+     {
+      "src": "photos/rebellion-way-2026/20260701_113811.jpg",
+      "caption": "Cattle resting in the long grass",
+      "group": "Wed 1 July"
+     },
+     {
+      "src": "photos/rebellion-way-2026/20260701_151750.jpg",
+      "caption": "Butterfly on a scabious flower",
+      "group": "Wed 1 July"
+     },
+     {
+      "src": "photos/rebellion-way-2026/20260701_160436.jpg",
+      "caption": "A shower-block rule worth knowing",
+      "group": "Wed 1 July"
+     },
+     {
+      "src": "photos/rebellion-way-2026/20260702_102232.jpg",
+      "caption": "Wildlife in the verge",
+      "group": "Thu 2 July"
+     },
+     {
+      "src": "photos/rebellion-way-2026/20260704_115259.jpg",
+      "caption": "Market day, bunting out",
+      "group": "Sat 4 July"
+     }
+    ],
+    "acts": [
+     {
+      "id": "19187093273",
+      "dist_m": 386772,
+      "moving_s": 82504,
+      "elev_m": 2427,
+      "kcal": 9757,
+      "poly": "u|e`Im|}FBdc@j`@wWz_AcxAb~@`uA`jA`Bd|@p~@h|CeRl`CxoAlt@wL`AreByd@z_Atw@|eChr@rF}Ids@r_@d\\vaA`g@vvDgWtYtcAlkA_f@||Bp`CzDli@t`DzLtmAdl@|n@jyBniAj]sIjz@jWtm@op@pMzd@j~CwNvQ`i@fy@{b@~jEsAfaFdlAboGaNpUpVn`Bu[dtCktBbrGexCe~BzAryB{lCtcClhBbyFsCnpDwj@f_FvvAf{B_e@j\\kwIuGdd@bnKqb@jkAwp@yi@ki@fi@w^}cBedAdZmN|{@is@ex@{_@pIuZkxA_p@daBoo@pCyAvuBif@kHsEziAsh@nBoAxtAyfAhf@lAjl@xO_NsKthBw`@lByh@bnAoq@dpCof@upAzPyJsUm~D}f@l]{v@mfEahEciFgt@i\\ibDbaEkq@iwB_eBi\\}l@}iAkhFhuD_E~lJx_BjxHdOtkFls@n_@}n@ab@i_A``@uf@vfEtgB`tAeLjuAzp@xqBfEb}Bm~BuO}lA|jCaVbCt@ycC}xBmc@k`@spA{~A}XcFgjEmc@gBoQuuAkt@xCyoAivAi`A_uCmbAW}zBzvAezDgyC_Wei@ibArqGvHbmCiqC}s@_zBkcB~C{|CdrBmiBgS_xUis@uqNthCihKuaD}Dgk@yzAmsAkFm\\seA|DciCliCqs@dBiy@Ghk@jfAq{B|GuoBt~Eln@zo@v}@|qBdaGjm@x`@zGwlAsQuMtHkoCit@orD_JuvC~{@o}Cub@m}Ea_@Om~@k`FgiCys@cz@nZqi@krAmZvCkGwkBjs@og@JspAvwBopAyLkv@kfBgx@smAyfEk_@gQ|xCwhA~d@_oE|x@{i@zQw`BzxCh`E~n@sUuPxiBw{B`W_v@ctAua@Om@s`@egDsf@wvAafD`OqhA|k@u`Ato@f]pQq}Bn`@w]rAehBl{@uh@z^cpAnrAlIbm@}q@~d@odDoOuwC`j@rJthBquCxdBpNtE_d@de@aIrrBdaA~bCh{Cz`AvQ~XdmDiV`iEnmA}{@feBgpDfw@cpD~v@{cA~VwrFniBilBiaA}^ofAlc@hiAoc@hdAzQbYt}@dr@~Y`rAo[xe@kjEmVcmCx]aO|NkoD`f@vEsQbxA`aBplAvKtcGtv@hb@mKp}Brc@baAaW|pBnp@xgDmLlcCjm@`vA`f@cD"
+     }
+    ]
+   }
+  ],
+  "single": true,
+  "nights": 4
  }
 ];
