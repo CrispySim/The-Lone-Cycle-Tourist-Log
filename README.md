@@ -1,4 +1,4 @@
-# The Solo Misanthrope’s Bikepacking Log
+# The Lone Cycle Tourist Log
 
 Static site for GitHub Pages. Files: `index.html` (page), `trips.js` (all trip data), `photos/<trip-id>/` (your pictures).
 
