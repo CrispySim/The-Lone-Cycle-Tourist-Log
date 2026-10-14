@@ -422,7 +422,7 @@ window.TRIPS = [
     ],
     "camp": {
      "name": "Everett's Farm",
-     "place": "Everett's Farm campsite",
+     "place": "Foulden, near Oxborough, Norfolk (Brecks)",
      "type": "Farm campsite",
      "blurb": "Booked direct with the farm and paid by PayPal: £15 a night for a tent with no electric. Arrival from 1pm, departure by 12 noon. Two toilets and two coin-operated showers (60p for 6 minutes), cold-water washing-up, and a chemical waste point.",
      "url": "https://everettsfarm.co.uk"
