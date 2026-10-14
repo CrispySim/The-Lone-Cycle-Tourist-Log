@@ -406,16 +406,16 @@ window.TRIPS = [
       "caption": "Little Audrey II, a tank on a plinth, and the bike"
      },
      {
-      "src": "photos/rebellion-way-2026/day1_cafe.jpg",
-      "caption": "Pizza stop at the Shepherd’s Hut, Lynford"
-     },
-     {
       "src": "photos/rebellion-way-2026/day1_wheatfield.jpg",
       "caption": "Wheat ripening under big July skies"
      },
      {
       "src": "photos/rebellion-way-2026/20260701_151750.jpg",
       "caption": "Butterfly on a scabious flower"
+     },
+     {
+      "src": "photos/rebellion-way-2026/day1_cafe.jpg",
+      "caption": "Pizza stop at the Shepherd’s Hut, Lynford"
      },
      {
       "src": "photos/rebellion-way-2026/20260701_160436.jpg",
