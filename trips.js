@@ -454,6 +454,26 @@ window.TRIPS = [
      {
       "src": "photos/rebellion-way-2026/20260702_102232.jpg",
       "caption": "Wildlife in the verge"
+     },
+     {
+      "src": "photos/rebellion-way-2026/day2_sheep.jpg",
+      "caption": "Sheep sheltering from the heat under the oaks"
+     },
+     {
+      "src": "photos/rebellion-way-2026/day2_field.jpg",
+      "caption": "Ploughed field and a lone oak under a big blue sky"
+     },
+     {
+      "src": "photos/rebellion-way-2026/day2_drivetrain.jpg",
+      "caption": "A trailside stop to check the rear wheel and drivetrain"
+     },
+     {
+      "src": "photos/rebellion-way-2026/day2_baileygate.jpg",
+      "caption": "Bailey Gate, Castle Acre"
+     },
+     {
+      "src": "photos/rebellion-way-2026/day2_castle.jpg",
+      "caption": "Castle Acre Castle, with willowherb on the mound"
      }
     ],
     "acts": [
