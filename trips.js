@@ -548,8 +548,28 @@ window.TRIPS = [
     "notes": "Day four, ending the night at Magpie Meadow, North Walsham.",
     "photos": [
      {
+      "src": "photos/rebellion-way-2026/day4_gatehouse.jpg",
+      "caption": "A medieval flint gatehouse, with the bike parked at its foot"
+     },
+     {
+      "src": "photos/rebellion-way-2026/day4_bunting_street.jpg",
+      "caption": "Bunting strung across a street of old brick and flint"
+     },
+     {
       "src": "photos/rebellion-way-2026/20260704_115259.jpg",
       "caption": "Market day, bunting out"
+     },
+     {
+      "src": "photos/rebellion-way-2026/day4_sheringham.jpg",
+      "caption": "Morris dancers taking a lunch break by the Sheringham beach huts"
+     },
+     {
+      "src": "photos/rebellion-way-2026/day4_camp_selfie.jpg",
+      "caption": "Camp selfie outside the tent"
+     },
+     {
+      "src": "photos/rebellion-way-2026/day4_sunset.jpg",
+      "caption": "Sunset over the meadow, tent in the distance"
      }
     ],
     "acts": [
