@@ -500,7 +500,28 @@ window.TRIPS = [
     "title": "Ride to Wells-next-the-Sea",
     "start": "King's Lynn",
     "notes": "Day three, ending the night at Blue Skies campsite in Wells-next-the-Sea.",
-    "photos": [],
+    "photos": [
+     {
+      "src": "photos/rebellion-way-2026/day3_holkham_hall.jpg",
+      "caption": "Holkham Hall, with a bronze big cat on guard"
+     },
+     {
+      "src": "photos/rebellion-way-2026/day3_avenue.jpg",
+      "caption": "Riding the Avenue through Holkham Park"
+     },
+     {
+      "src": "photos/rebellion-way-2026/day3_wells_harbour.jpg",
+      "caption": "Wells-next-the-Sea harbour at low tide"
+     },
+     {
+      "src": "photos/rebellion-way-2026/day3_wells_quay.jpg",
+      "caption": "Bike parked on Wells quay among the fish crates"
+     },
+     {
+      "src": "photos/rebellion-way-2026/day3_beach_huts.jpg",
+      "caption": "Beach huts, lavender and an ice cream sign"
+     }
+    ],
     "acts": [
      {
       "id": "19187093273",
