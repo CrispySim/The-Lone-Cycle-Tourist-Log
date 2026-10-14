@@ -393,11 +393,9 @@ window.TRIPS = [
    {
     "n": 1,
     "date": "2026-07-01",
-    "title": "Norwich to the Brecks",
+    "title": "Ride to Everett's Farm",
     "start": "Norwich",
-    "notes": "Out of Norwich via the Roman town of Venta Icenorum and Wymondham Abbey, then south into Thetford Forest and the wide heathlands of the Brecks. The first half of the day is quiet lanes; by Thetford things open up into big sandy tracks and conifer rides.",
-    "route": "Norwich, Venta Icenorum, Wymondham, Attleborough, Thetford Forest edge, Northwold area.",
-    "highlight": "Wymondham Abbey appears suddenly above the Norfolk fields — a beautiful ruin to stop at before the long run south into the forest.",
+    "notes": "Day one of the loop, ending the night at Everett's Farm.",
     "photos": [
      {
       "src": "photos/rebellion-way-2026/20260701_113811.jpg",
@@ -423,21 +421,19 @@ window.TRIPS = [
      }
     ],
     "camp": {
-     "name": "Oak Lodge Glamping",
-     "place": "Northwold, near Thetford, Norfolk",
-     "type": "Small campsite, Brecks",
-     "blurb": "A quiet, rural site tucked into the Brecks farmland south of Northwold. Small and peaceful, with clean facilities — the kind of place you have almost to yourself on a weekday in July.",
-     "url": ""
+     "name": "Everett's Farm",
+     "place": "Everett's Farm campsite",
+     "type": "Farm campsite",
+     "blurb": "Booked direct with the farm and paid by PayPal: £15 a night for a tent with no electric. Arrival from 1pm, departure by 12 noon. Two toilets and two coin-operated showers (60p for 6 minutes), cold-water washing-up, and a chemical waste point.",
+     "url": "https://everettsfarm.co.uk"
     }
    },
    {
     "n": 2,
     "date": "2026-07-02",
-    "title": "Brecks to the Wash",
-    "start": "Northwold",
-    "notes": "West out of the Brecks through Swaffham's market town and the ruins of Castle Acre Priory, with a ford crossing of the River Nar. Past Oxborough Hall then across the flat farmland towards King's Lynn and the edge of the Wash.",
-    "route": "Northwold, Swaffham, Castle Acre, Oxborough, South of King's Lynn, Ingoldisthorpe.",
-    "highlight": "The ford crossing at Castle Acre is one of the Rebellion Way's characterful moments — knee-deep water in July, and a brief wild swim opportunity if you're brave.",
+    "title": "Ride to King's Lynn",
+    "start": "Everett's Farm",
+    "notes": "Day two, ending the night at King's Lynn Caravan & Camping Park.",
     "photos": [
      {
       "src": "photos/rebellion-way-2026/20260702_102232.jpg",
@@ -455,21 +451,19 @@ window.TRIPS = [
      }
     ],
     "camp": {
-     "name": "Hall Farm CL",
-     "place": "Ingoldisthorpe, between King's Lynn and Hunstanton",
-     "type": "Certificated Location (C&MC), quiet farm",
-     "blurb": "A small Caravan & Motorhome Club Certificated Location on a working farm, with just five pitches. Sheltered, quiet and the sort of site where you might share the field with one other tent.",
+     "name": "King's Lynn Caravan & Camping Park",
+     "place": "North Runcton, King's Lynn",
+     "type": "Caravan and camping park",
+     "blurb": "Booked and paid for ahead of the ride.",
      "url": ""
     }
    },
    {
     "n": 3,
     "date": "2026-07-03",
-    "title": "Wash to the North Coast",
-    "start": "Ingoldisthorpe",
-    "notes": "The short day of the loop, letting the coast do the work. Past the edge of Sandringham estate and north to Hunstanton's striped chalk cliffs, then east along the North Norfolk coast — Holme, Titchwell RSPB, Brancaster — to camp at Burnham Deepdale.",
-    "route": "Ingoldisthorpe, Sandringham edge, Hunstanton, Holme-next-the-Sea, Thornham, Titchwell, Brancaster, Burnham Deepdale.",
-    "highlight": "Titchwell RSPB is one of the best birdwatching spots in England, even from the road. In July you'll have avocets, marsh harriers and terns without needing to stop.",
+    "title": "Ride to Wells-next-the-Sea",
+    "start": "King's Lynn",
+    "notes": "Day three, ending the night at Blue Skies campsite in Wells-next-the-Sea.",
     "photos": [],
     "acts": [
      {
@@ -482,21 +476,19 @@ window.TRIPS = [
      }
     ],
     "camp": {
-     "name": "Deepdale Camping",
-     "place": "Burnham Deepdale, North Norfolk Coast AONB",
-     "type": "Small campsite, AA Small Campsite of the Year 2023/24",
-     "blurb": "One of the best small campsites in England: peaceful, well-run and right on the edge of the coast path. On-site shop, bike hire, and access to the saltmarsh and coast without getting back on the bike. 4.8★ on Google (831 reviews).",
-     "url": "https://deepdalecamping.co.uk"
+     "name": "Blue Skies",
+     "place": "Wells-next-the-Sea, North Norfolk",
+     "type": "Campsite",
+     "blurb": "Booked ahead, with £10 to pay in cash on arrival.",
+     "url": ""
     }
    },
    {
     "n": 4,
     "date": "2026-07-04",
-    "title": "Coast to the Broads edge",
-    "start": "Burnham Deepdale",
-    "notes": "East from the coast through Wells-next-the-Sea (and its famous black-painted beach huts), the pilgrimage town of Walsingham, then inland through Holt and the quiet lanes of Felbrigg to camp near Aylsham, a mile from the Blickling Estate.",
-    "route": "Burnham Deepdale, Wells-next-the-Sea, Little Walsingham, Holt, Felbrigg Hall, Aylsham area.",
-    "highlight": "Walsingham is one of England's great pilgrimage sites — an unexpected medieval throwback in the middle of the Norfolk countryside, particularly atmospheric on a quiet weekday morning.",
+    "title": "Ride to North Walsham",
+    "start": "Wells-next-the-Sea",
+    "notes": "Day four, ending the night at Magpie Meadow, North Walsham.",
     "photos": [
      {
       "src": "photos/rebellion-way-2026/20260704_115259.jpg",
@@ -514,21 +506,19 @@ window.TRIPS = [
      }
     ],
     "camp": {
-     "name": "North Farm Cottages",
-     "place": "Near Aylsham / Blickling Estate, North Norfolk",
-     "type": "Small campsite, farm setting",
-     "blurb": "A small, quiet site near Aylsham on the edge of the Blickling Estate. Simple and unhurried — a good base for an evening walk around Blickling Hall's grounds before the final day.",
-     "url": ""
+     "name": "Magpie Meadow",
+     "place": "Bradfield Road, North Walsham, Norfolk",
+     "type": "Campsite, quiet meadow pitches",
+     "blurb": "Quiet non-electric grass pitch for a tent, booked through Pitchup (£15 for the night). Check-in from 12pm, departure by 11am.",
+     "url": "https://www.pitchup.com/campsites/England/East_Anglia/Norfolk/North_Walsham/magpie-meadow/"
     }
    },
    {
     "n": 5,
     "date": "2026-07-05",
     "title": "Broads to Norwich",
-    "start": "Aylsham",
-    "notes": "The easy final day, dropping down through the Broads by Coltishall and Wroxham before the last lanes back into Norwich. A gradual wind-down after the big days — mostly flat, mostly quiet.",
-    "route": "Aylsham, Coltishall, Wroxham, Hoveton, Norwich.",
-    "highlight": "Wroxham is the self-styled 'capital of the Broads' — it's worth a pause for a coffee and to watch the hire boats navigating the narrow river bridges.",
+    "start": "North Walsham",
+    "notes": "The final day of the loop, from Magpie Meadow.",
     "photos": [],
     "acts": [
      {
