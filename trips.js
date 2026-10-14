@@ -452,10 +452,10 @@ window.TRIPS = [
     ],
     "camp": {
      "name": "King's Lynn Caravan & Camping Park",
-     "place": "North Runcton, King's Lynn",
+     "place": "New Road, North Runcton, King's Lynn",
      "type": "Caravan and camping park",
-     "blurb": "Booked and paid for ahead of the ride.",
-     "url": ""
+     "blurb": "Booked and paid for ahead of the ride. Ten acres of mature parkland on the edge of North Runcton, the closest campsite to King's Lynn. Flush toilets, heated showers, laundry, a barbecue area and cycle storage.",
+     "url": "http://www.kl-cc.co.uk"
     }
    },
    {
