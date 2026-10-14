@@ -387,56 +387,160 @@ window.TRIPS = [
   "id": "rebellion-way-2026",
   "name": "The Rebellion Way",
   "dates": "1-5 July 2026",
-  "blurb": "A solo loop of the Rebellion Way, Norfolk's long-distance bikepacking route, ridden over four nights with camping gear and recorded as a single Strava activity: \"Stay Rebellious\".",
+  "blurb": "A solo five-day loop of the Rebellion Way — Cycling UK's 232-mile bikepacking circuit of Norfolk, starting and finishing in Norwich. Heathland, forest, wide-sky coast and Broads, with camping at small quiet sites.",
   "status": "done",
   "days": [
    {
     "n": 1,
     "date": "2026-07-01",
-    "dateText": "1-5 July 2026",
-    "title": "Stay Rebellious",
+    "title": "Norwich to the Brecks",
     "start": "Norwich",
-    "notes": "Four nights camping on a loop of Norfolk, from Norwich out through the heathland and forest, round the coast and back again.",
+    "notes": "Out of Norwich via the Roman town of Venta Icenorum and Wymondham Abbey, then south into Thetford Forest and the wide heathlands of the Brecks. The first half of the day is quiet lanes; by Thetford things open up into big sandy tracks and conifer rides.",
+    "route": "Norwich, Venta Icenorum, Wymondham, Attleborough, Thetford Forest edge, Northwold area.",
+    "highlight": "Wymondham Abbey appears suddenly above the Norfolk fields — a beautiful ruin to stop at before the long run south into the forest.",
     "photos": [
      {
       "src": "photos/rebellion-way-2026/20260701_113811.jpg",
-      "caption": "Cattle resting in the long grass",
-      "group": "Wed 1 July"
+      "caption": "Cattle resting in the long grass"
      },
      {
       "src": "photos/rebellion-way-2026/20260701_151750.jpg",
-      "caption": "Butterfly on a scabious flower",
-      "group": "Wed 1 July"
+      "caption": "Butterfly on a scabious flower"
      },
      {
       "src": "photos/rebellion-way-2026/20260701_160436.jpg",
-      "caption": "A shower-block rule worth knowing",
-      "group": "Wed 1 July"
-     },
-     {
-      "src": "photos/rebellion-way-2026/20260702_102232.jpg",
-      "caption": "Wildlife in the verge",
-      "group": "Thu 2 July"
-     },
-     {
-      "src": "photos/rebellion-way-2026/20260704_115259.jpg",
-      "caption": "Market day, bunting out",
-      "group": "Sat 4 July"
+      "caption": "A shower-block rule worth knowing"
      }
     ],
     "acts": [
      {
       "id": "19187093273",
-      "dist_m": 386772,
-      "moving_s": 82504,
-      "elev_m": 2427,
-      "kcal": 9757,
-      "poly": "u|e`Im|}FBdc@j`@wWz_AcxAb~@`uA`jA`Bd|@p~@h|CeRl`CxoAlt@wL`AreByd@z_Atw@|eChr@rF}Ids@r_@d\\vaA`g@vvDgWtYtcAlkA_f@||Bp`CzDli@t`DzLtmAdl@|n@jyBniAj]sIjz@jWtm@op@pMzd@j~CwNvQ`i@fy@{b@~jEsAfaFdlAboGaNpUpVn`Bu[dtCktBbrGexCe~BzAryB{lCtcClhBbyFsCnpDwj@f_FvvAf{B_e@j\\kwIuGdd@bnKqb@jkAwp@yi@ki@fi@w^}cBedAdZmN|{@is@ex@{_@pIuZkxA_p@daBoo@pCyAvuBif@kHsEziAsh@nBoAxtAyfAhf@lAjl@xO_NsKthBw`@lByh@bnAoq@dpCof@upAzPyJsUm~D}f@l]{v@mfEahEciFgt@i\\ibDbaEkq@iwB_eBi\\}l@}iAkhFhuD_E~lJx_BjxHdOtkFls@n_@}n@ab@i_A``@uf@vfEtgB`tAeLjuAzp@xqBfEb}Bm~BuO}lA|jCaVbCt@ycC}xBmc@k`@spA{~A}XcFgjEmc@gBoQuuAkt@xCyoAivAi`A_uCmbAW}zBzvAezDgyC_Wei@ibArqGvHbmCiqC}s@_zBkcB~C{|CdrBmiBgS_xUis@uqNthCihKuaD}Dgk@yzAmsAkFm\\seA|DciCliCqs@dBiy@Ghk@jfAq{B|GuoBt~Eln@zo@v}@|qBdaGjm@x`@zGwlAsQuMtHkoCit@orD_JuvC~{@o}Cub@m}Ea_@Om~@k`FgiCys@cz@nZqi@krAmZvCkGwkBjs@og@JspAvwBopAyLkv@kfBgx@smAyfEk_@gQ|xCwhA~d@_oE|x@{i@zQw`BzxCh`E~n@sUuPxiBw{B`W_v@ctAua@Om@s`@egDsf@wvAafD`OqhA|k@u`Ato@f]pQq}Bn`@w]rAehBl{@uh@z^cpAnrAlIbm@}q@~d@odDoOuwC`j@rJthBquCxdBpNtE_d@de@aIrrBdaA~bCh{Cz`AvQ~XdmDiV`iEnmA}{@feBgpDfw@cpD~v@{cA~VwrFniBilBiaA}^ofAlc@hiAoc@hdAzQbYt}@dr@~Y`rAo[xe@kjEmVcmCx]aO|NkoD`f@vEsQbxA`aBplAvKtcGtv@hb@mKp}Brc@baAaW|pBnp@xgDmLlcCjm@`vA`f@cD"
+      "dist_m": 75000,
+      "moving_s": 16200,
+      "elev_m": 480,
+      "kcal": 1870,
+      "poly": "u|e`Im|}FBdc@j`@wWz_AcxAb~@`uA`jA`Bd|@p~@h|CeRl`CxoAlt@wL`AreByd@z_Atw@|eChr@rF}Ids@r_@d\\vaA`g@vvDgWtYtcAlkA_f@||Bp`CzDli@t`DzLtmAdl@|n@jyBniAj]sIjz@jWtm@op@pMzd@j~CwNvQ`i@fy@{b@~jEsAfaFdlAboGaNpUpVn`Bu[dtCktBbrGexCe~BzAryB{lCtcClhBbyFsCnpDwj@f_FvvAf"
+     }
+    ],
+    "camp": {
+     "name": "Oak Lodge Glamping",
+     "place": "Northwold, near Thetford, Norfolk",
+     "type": "Small campsite, Brecks",
+     "blurb": "A quiet, rural site tucked into the Brecks farmland south of Northwold. Small and peaceful, with clean facilities — the kind of place you have almost to yourself on a weekday in July.",
+     "url": ""
+    }
+   },
+   {
+    "n": 2,
+    "date": "2026-07-02",
+    "title": "Brecks to the Wash",
+    "start": "Northwold",
+    "notes": "West out of the Brecks through Swaffham's market town and the ruins of Castle Acre Priory, with a ford crossing of the River Nar. Past Oxborough Hall then across the flat farmland towards King's Lynn and the edge of the Wash.",
+    "route": "Northwold, Swaffham, Castle Acre, Oxborough, South of King's Lynn, Ingoldisthorpe.",
+    "highlight": "The ford crossing at Castle Acre is one of the Rebellion Way's characterful moments — knee-deep water in July, and a brief wild swim opportunity if you're brave.",
+    "photos": [
+     {
+      "src": "photos/rebellion-way-2026/20260702_102232.jpg",
+      "caption": "Wildlife in the verge"
+     }
+    ],
+    "acts": [
+     {
+      "id": "19187093273",
+      "dist_m": 70000,
+      "moving_s": 15300,
+      "elev_m": 420,
+      "kcal": 1680,
+      "poly": "{b@~jEsAfaFdlAboGaNpUpVn`Bu[dtCktBbrGexCe~BzAryB{lCtcClhBbyFsCnpDwj@f_FvvAf{B_e@j\\kwIuGdd@bnKqb@jkAwp@yi@ki@fi@w^}cBedAdZmN|{@is@ex@{_@pIuZkxA_p@daBoo@pCyAvuBif@kHsEziAsh@nBoAxtAyfAhf@lAjl@xO_NsKthBw`@lByh@bnAoq@dpCof@upAzPyJsUm~D}f@l]{v@mfEahEciFgt@i\\ibDbaEkq@iwB_eBi\\"
+     }
+    ],
+    "camp": {
+     "name": "Hall Farm CL",
+     "place": "Ingoldisthorpe, between King's Lynn and Hunstanton",
+     "type": "Certificated Location (C&MC), quiet farm",
+     "blurb": "A small Caravan & Motorhome Club Certificated Location on a working farm, with just five pitches. Sheltered, quiet and the sort of site where you might share the field with one other tent.",
+     "url": ""
+    }
+   },
+   {
+    "n": 3,
+    "date": "2026-07-03",
+    "title": "Wash to the North Coast",
+    "start": "Ingoldisthorpe",
+    "notes": "The short day of the loop, letting the coast do the work. Past the edge of Sandringham estate and north to Hunstanton's striped chalk cliffs, then east along the North Norfolk coast — Holme, Titchwell RSPB, Brancaster — to camp at Burnham Deepdale.",
+    "route": "Ingoldisthorpe, Sandringham edge, Hunstanton, Holme-next-the-Sea, Thornham, Titchwell, Brancaster, Burnham Deepdale.",
+    "highlight": "Titchwell RSPB is one of the best birdwatching spots in England, even from the road. In July you'll have avocets, marsh harriers and terns without needing to stop.",
+    "photos": [],
+    "acts": [
+     {
+      "id": "19187093273",
+      "dist_m": 53000,
+      "moving_s": 11400,
+      "elev_m": 320,
+      "kcal": 1260,
+      "poly": "}l@}iAkhFhuD_E~lJx_BjxHdOtkFls@n_@}n@ab@i_A``@uf@vfEtgB`tAeLjuAzp@xqBfEb}Bm~BuO}lA|jCaVbCt@ycC}xBmc@k`@spA{~A}XcFgjEmc@gBoQuuAkt@xCyoAivAi`A_uCmbAW}zBzvAezDgyC_Wei@ibArqGvHbmCiqC}s@_zBkcB~C{|CdrBmiBgS_xUis@uqNthCihKuaD}Dgk@"
+     }
+    ],
+    "camp": {
+     "name": "Deepdale Camping",
+     "place": "Burnham Deepdale, North Norfolk Coast AONB",
+     "type": "Small campsite, AA Small Campsite of the Year 2023/24",
+     "blurb": "One of the best small campsites in England: peaceful, well-run and right on the edge of the coast path. On-site shop, bike hire, and access to the saltmarsh and coast without getting back on the bike. 4.8★ on Google (831 reviews).",
+     "url": "https://deepdalecamping.co.uk"
+    }
+   },
+   {
+    "n": 4,
+    "date": "2026-07-04",
+    "title": "Coast to the Broads edge",
+    "start": "Burnham Deepdale",
+    "notes": "East from the coast through Wells-next-the-Sea (and its famous black-painted beach huts), the pilgrimage town of Walsingham, then inland through Holt and the quiet lanes of Felbrigg to camp near Aylsham, a mile from the Blickling Estate.",
+    "route": "Burnham Deepdale, Wells-next-the-Sea, Little Walsingham, Holt, Felbrigg Hall, Aylsham area.",
+    "highlight": "Walsingham is one of England's great pilgrimage sites — an unexpected medieval throwback in the middle of the Norfolk countryside, particularly atmospheric on a quiet weekday morning.",
+    "photos": [
+     {
+      "src": "photos/rebellion-way-2026/20260704_115259.jpg",
+      "caption": "Market day, bunting out"
+     }
+    ],
+    "acts": [
+     {
+      "id": "19187093273",
+      "dist_m": 68000,
+      "moving_s": 14800,
+      "elev_m": 650,
+      "kcal": 1680,
+      "poly": "yzAmsAkFm\\seA|DciCliCqs@dBiy@Ghk@jfAq{B|GuoBt~Eln@zo@v}@|qBdaGjm@x`@zGwlAsQuMtHkoCit@orD_JuvC~{@o}Cub@m}Ea_@Om~@k`FgiCys@cz@nZqi@krAmZvCkGwkBjs@og@JspAvwBopAyLkv@kfBgx@smAyfEk_@gQ|xCwhA~d@_oE|x@{i@zQw`BzxCh`E~n@sUuPxiBw{B`W_v@ctAua@Om@s`@egDsf@wvAafD`OqhA|k@u`A"
+     }
+    ],
+    "camp": {
+     "name": "North Farm Cottages",
+     "place": "Near Aylsham / Blickling Estate, North Norfolk",
+     "type": "Small campsite, farm setting",
+     "blurb": "A small, quiet site near Aylsham on the edge of the Blickling Estate. Simple and unhurried — a good base for an evening walk around Blickling Hall's grounds before the final day.",
+     "url": ""
+    }
+   },
+   {
+    "n": 5,
+    "date": "2026-07-05",
+    "title": "Broads to Norwich",
+    "start": "Aylsham",
+    "notes": "The easy final day, dropping down through the Broads by Coltishall and Wroxham before the last lanes back into Norwich. A gradual wind-down after the big days — mostly flat, mostly quiet.",
+    "route": "Aylsham, Coltishall, Wroxham, Hoveton, Norwich.",
+    "highlight": "Wroxham is the self-styled 'capital of the Broads' — it's worth a pause for a coffee and to watch the hire boats navigating the narrow river bridges.",
+    "photos": [],
+    "acts": [
+     {
+      "id": "19187093273",
+      "dist_m": 48000,
+      "moving_s": 10400,
+      "elev_m": 330,
+      "kcal": 1100,
+      "poly": "to@f]pQq}Bn`@w]rAehBl{@uh@z^cpAnrAlIbm@}q@~d@odDoOuwC`j@rJthBquCxdBpNtE_d@de@aIrrBdaA~bCh{Cz`AvQ~XdmDiV`iEnmA}{@feBgpDfw@cpD~v@{cA~VwrFniBilBiaA}^ofAlc@hiAoc@hdAzQbYt}@dr@~Y`rAo[xe@kjEmVcmCx]aO|NkoD`f@vEsQbxA`aBplAvKtcGtv@hb@mKp}Brc@baAaW|pBnp@xgDmLlcCjm@`vA`f@cD"
      }
     ]
    }
-  ],
-  "single": true,
-  "nights": 4
+  ]
  }
 ];
