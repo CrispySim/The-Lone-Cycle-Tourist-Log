@@ -402,6 +402,14 @@ window.TRIPS = [
       "caption": "Cattle resting in the long grass"
      },
      {
+      "src": "photos/rebellion-way-2026/day1_tank.jpg",
+      "caption": "Little Audrey II, a tank on a plinth, and the bike"
+     },
+     {
+      "src": "photos/rebellion-way-2026/day1_cafe.jpg",
+      "caption": "Pizza stop at the Shepherd’s Hut, Lynford"
+     },
+     {
       "src": "photos/rebellion-way-2026/day1_wheatfield.jpg",
       "caption": "Wheat ripening under big July skies"
      },
