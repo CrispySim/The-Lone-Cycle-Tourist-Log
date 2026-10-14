@@ -477,10 +477,10 @@ window.TRIPS = [
     ],
     "camp": {
      "name": "Blue Skies",
-     "place": "Wells-next-the-Sea, North Norfolk",
-     "type": "Campsite",
-     "blurb": "Booked ahead, with £10 to pay in cash on arrival.",
-     "url": ""
+     "place": "Stiffkey Road, Wells-next-the-Sea, Norfolk",
+     "type": "Campsite, no electric hook-up",
+     "blurb": "Booked ahead, with £10 to pay in cash on arrival. On the south-east edge of Wells, about 200 yards past the entrance to the Wells and Walsingham Light Railway. On-site shop for camping essentials, cold drinks, ice creams and eggs, with phone charging at reception.",
+     "url": "https://www.blueskiescampsite.co.uk/"
     }
    },
    {
