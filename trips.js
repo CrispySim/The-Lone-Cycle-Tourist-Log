@@ -465,7 +465,7 @@ window.TRIPS = [
      },
      {
       "src": "photos/rebellion-way-2026/day2_drivetrain.jpg",
-      "caption": "A trailside stop to check the rear wheel and drivetrain"
+      "caption": "Puncture: a trailside stop to fix the rear tyre"
      },
      {
       "src": "photos/rebellion-way-2026/day2_baileygate.jpg",
