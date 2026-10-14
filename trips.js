@@ -596,7 +596,28 @@ window.TRIPS = [
     "title": "Broads to Norwich",
     "start": "North Walsham",
     "notes": "The final day of the loop, from Magpie Meadow.",
-    "photos": [],
+    "photos": [
+     {
+      "src": "photos/rebellion-way-2026/day5_bure_valley_sign.jpg",
+      "caption": "Bure Valley Path signpost: Aylsham 3¼ miles, Hoveton & Wroxham 5½"
+     },
+     {
+      "src": "photos/rebellion-way-2026/day5_level_crossing.jpg",
+      "caption": "Crossing the Bure Valley Railway line"
+     },
+     {
+      "src": "photos/rebellion-way-2026/day5_wroxham_gate.jpg",
+      "caption": "Under the steam-train arch at Wroxham Gate"
+     },
+     {
+      "src": "photos/rebellion-way-2026/day5_norwich_spire.jpg",
+      "caption": "First sight of Norwich Cathedral's spire"
+     },
+     {
+      "src": "photos/rebellion-way-2026/day5_train_colchester.jpg",
+      "caption": "Bike on the train home, pulling into Colchester"
+     }
+    ],
     "acts": [
      {
       "id": "19187093273",
